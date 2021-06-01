@@ -1,0 +1,18 @@
+.banner {
+    max-height: 64px;
+}
+
+.logo-area {
+    background: rgb(197, 197, 197);
+    max-height: 64px;
+    max-width: 260px;
+    min-width: 260px;
+    padding-left: 20px;
+    margin-left: 0px;
+}
+
+.avatar-area {
+    right: 0px;
+    position: absolute;
+    margin-right: 25px;
+}

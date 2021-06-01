@@ -1,0 +1,15 @@
+@import '~antd/dist/antd.css';
+
+button {
+    border: none;
+    background-color: white;
+}
+
+.ant-avatar {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.unread-message {
+    max-height: 80px;
+}

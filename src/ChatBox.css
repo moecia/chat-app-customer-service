@@ -14,13 +14,15 @@
 
 .message-area {
     background-color: rgb(243, 243, 243);
-    min-height: 400px;
+    height: 635px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .quick-reply {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 150px;
+    height: 420px;
 }
 
 .message-item {
@@ -34,7 +36,7 @@
 }
 
 .reply-area {
-    height: 250px;
+    height: 180px;
 }
 
 .buttons {

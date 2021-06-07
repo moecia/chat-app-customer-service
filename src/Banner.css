@@ -16,3 +16,12 @@
     position: absolute;
     margin-right: 25px;
 }
+
+.ant-badge-status {
+    line-height: normal !important;
+}
+
+.ant-badge-dot {
+    width: 12px !important;
+    height: 12px !important;
+}

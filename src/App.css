@@ -22,4 +22,11 @@
 
 .message-list {
   width:  260px;
+  height: 425px;
+}
+
+.read-message {
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: rgb(206, 206, 206);
 }

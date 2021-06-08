@@ -107,7 +107,7 @@ class ChatBox extends React.Component {
         this.setState({
             textValue: ""
         });
-        this.props.updateMessageList();
+        this.props.onMessageSent(this.state.username);
     }
 
     render() {

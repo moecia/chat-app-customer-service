@@ -110,6 +110,12 @@ class ChatBox extends React.Component {
         this.props.onMessageSent(this.state.username);
     }
 
+    processEndChat = () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("post", `http://44.233.224.103/admin/ipname/${this.state.userContent}/end_chat`);
+        xhr.send();
+    }
+
     render() {
         return (
             <div className="chat-box">
@@ -138,7 +144,7 @@ class ChatBox extends React.Component {
                             <Col span={24}>
                                 <TextArea showCount maxLength={200} rows={4} value={this.state.textValue} onChange={this.onChange} />
                                 <div className="buttons">
-                                    <Button>End Chat</Button>
+                                    <Button onClick={ this.processEndChat }>End Chat</Button>
                                     <Button onClick={ this.processSubmit }>Send</Button>
                                 </div>
                             </Col>

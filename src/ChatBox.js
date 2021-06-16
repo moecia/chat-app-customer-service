@@ -21,10 +21,10 @@ class ChatBox extends React.Component {
             scripts: [],
             quickReplies: []
         }
-        this.dealer = new WebSocket("ws://44.233.224.103:8765");
-        this.dealer.onopen = function(event) {
-            console.log("WS Opened.");
-        }
+        //this.dealer = new WebSocket("ws://44.233.224.103:8765");
+        //this.dealer.onopen = function(event) {
+        //    console.log("WS Opened.");
+        //}
     }
 
 
@@ -49,7 +49,7 @@ class ChatBox extends React.Component {
                     const line = post.substring(post.lastIndexOf(":") + 2, post.length - 1);
                     if(post.includes("user:") === true) {
                         messages.push(<Message message={line} myMessage={false} key={`userline${count}`}/>);
-                    } else if(post.includes("us:")  === true) {
+                    } else if(post.includes("bot:")  === true) {
                         messages.push(<Message message={line} myMessage={true} key={`usline${count}`}/>);
                     }
                     count++;
@@ -101,7 +101,7 @@ class ChatBox extends React.Component {
         const xhr = new XMLHttpRequest();
         xhr.open("post", `http://44.233.224.103/admin/ipname/${this.state.userContent}`);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        // this.dealer.send(`admin_post_message ${this.state.textValue}}`);  
+        //this.dealer.send(`${this.state.userContent} admin_post_message ${this.state.textValue}`);  
         xhr.send(`content=${this.state.textValue}&disable=&bt1`);
         this.updateBox(this.state.username, "", this.state.userContent);
         this.setState({
